@@ -5,9 +5,12 @@ import acm.program.ConsoleProgram;
  * @description: Caculate factorial of n
  * @author Shawn Yang
  * @create 2021-09-18 00:46
- **/
+ */
 public class Factorials extends ConsoleProgram {
-
+    /**
+     * The max number of the loops.
+     * @see #run()
+     */
     private static final int MAX_NUM = 5;
     public void run() {
         for (int i = 0; i < MAX_NUM; i++) {
