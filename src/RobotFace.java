@@ -1,5 +1,4 @@
 /**
- * @program: TestKarelProgram
  * @description: This program draws a robot face.
  * @author: Shawn Yang
  * @create: 2021-09-18 22:18
