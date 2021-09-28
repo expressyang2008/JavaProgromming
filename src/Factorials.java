@@ -20,7 +20,7 @@ public class Factorials extends ConsoleProgram {
     
     /**
      * factorial
-     * @param n
+     * @param n The number of times.
      * @version 0.1.0
      * @return int resutl
      * @author Shawn Yang

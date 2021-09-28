@@ -6,9 +6,8 @@
  **/
 
 import stanford.karel.*;
-
-public class KarelTtest extends Karel{
-    public void run(){
+public class KarelTtest extends Karel {
+    public void run() {
         move();
     }
 }
