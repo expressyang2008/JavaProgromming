@@ -1,5 +1,6 @@
 import acm.program.ConsoleProgram;
 import acm.util.ErrorException;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -12,7 +13,7 @@ import java.io.IOException;
  * @create: 2021-10-04 20:23
  */
 public class AnotherFileExample extends ConsoleProgram {
-    private BufferedReader openFIle(String prompt) {
+    private BufferedReader openFIle() {
         BufferedReader rd = null;
         while (rd == null) {
             try {
@@ -27,7 +28,7 @@ public class AnotherFileExample extends ConsoleProgram {
 
     public void run() {
         setFont("Courier-24");
-        BufferedReader rd = openFIle("Please enter filename:");
+        BufferedReader rd = openFIle();
         try {
             while (true) {
                 String line = rd.readLine();
@@ -35,8 +36,7 @@ public class AnotherFileExample extends ConsoleProgram {
                 println("Read line:[" + line + "]");
             }
             rd.close();
-        }
-        catch (IOException ex){
+        } catch (IOException ex) {
             throw new ErrorException(ex);
         }
     }
