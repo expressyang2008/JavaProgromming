@@ -24,22 +24,31 @@ public class CopyFileExample extends ConsoleProgram {
         return rd;
     }
 
-    public void run(){
-            BufferedReader br = openFIle();
-            try {
-                PrintWriter pw = new PrintWriter(new FileWriter("copy.txt",true));
-                while(true){
-                    String line = br.readLine();
-                    if(line==null) break;
-                    pw.println(line);
-                    println("["+line+"] has copied.");
-                }
-                pw.flush();
-                pw.close();
-                br.close();
-            }
-            catch (IOException ex){
-                throw new ErrorException(ex);
-            }
+    public void run() {
+
+        int[] array = new int[5];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = i + 1;
+        }
+
+        for (int i = 0; i < array.length; i++) {
+            println(array[i]);
+        }
+
+        swap(array,1,3);
+
+        for (int i = 0; i < array.length; i++) {
+            println(array[i]);
+        }
+
+
+
+    }
+
+    private void swap(int[] arr, int a, int b) {
+        int temp = 0;
+        temp = arr[a];
+        arr[a]=arr[b];
+        arr[b] = temp;
     }
 }
