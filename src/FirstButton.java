@@ -13,14 +13,17 @@ import java.awt.event.ActionEvent;
 public class FirstButton extends ConsoleProgram {
     public void init(){
         setFont("Courier-24");
-        add(new JButton("确定"),SOUTH);
+        add(new JButton("确定1"),EAST);
+        add(new JButton("确定2"),SOUTH);
+        add(new JButton("确定3"),WEST);
+        add(new JButton("确定4"),NORTH);
         addActionListeners();
     }
 
     public void actionPerformed(ActionEvent e){
         String cmd = e.getActionCommand();
-        if(cmd.equals("确定")){
-            println("你点击了确认按钮。");
+        if(cmd.equals("确定1")){
+            println("你点击了确认1按钮。");
         }
     }
 }

@@ -13,22 +13,22 @@ public class ArrayExample extends ConsoleProgram {
 
     public void run() {
         /*example1*/
-        int[] quiz = new int[MAX_SIZE];
-        int numScore = 0;
-        while (true) {
-            int score = readInt("One score of a student:");
-            if (score == SENTINEL) break;
-            quiz[numScore++] = score;
-        }
-        /*example2*/
-//        int maxLength = readInt("The number of the array");
-//        int[] quiz = new int[maxLength];
+//        int[] quiz = new int[MAX_SIZE];
 //        int numScore = 0;
-//        for (int i = 0; i < maxLength; i++) {
-//            quiz[i] = readInt("The score of "+i+1+"th student:");
-//            if (quiz[i] == SENTINEL) break;
-//            numScore++;
+//        while (true) {
+//            int score = readInt("One score of a student:");
+//            if (score == SENTINEL) break;
+//            quiz[numScore++] = score;
 //        }
+        /*example2*/
+        int maxLength = readInt("The number of the array");
+        int[] quiz = new int[maxLength];
+        int numScore = 0;
+        for (int i = 0; i < maxLength; i++) {
+            quiz[i] = readInt("The score of "+i+1+"th student:");
+            if (quiz[i] == SENTINEL) break;
+            numScore++;
+        }
         println("The average score of this quiz is:" + computeAverage(quiz, numScore));
     }
 

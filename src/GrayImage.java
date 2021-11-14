@@ -36,11 +36,9 @@ public class GrayImage extends GraphicsProgram {
             for (int j = 0; j < width; j++) {
 
                 int pixel = array[i][j];
-
                 int r = GImage.getRed(pixel);
                 int g = GImage.getGreen(pixel);
                 int b = GImage.getBlue(pixel);
-
                 int gray = floatChangeGray(r, g, b);
 
                 array[i][j] = GImage.createRGBPixel(gray, gray, gray);
