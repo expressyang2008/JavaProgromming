@@ -1,0 +1,45 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class FlyTuneSongs {
+    private String title;
+    private String band;
+    private double price;
+    public FlyTunesSong(String songName, String bandName, double songPrice)
+    public String getSongName()
+    public String getBandName()
+    public void setPrice(double songPrice)
+    public double getPrice()
+    public String toString() {
+}
+
+class FlyTunesAlbum {
+    public FlyTunesAlbum(String albumName, String bandName)
+    public String getAlbumName()
+    public String getBandName()
+    public void addSong(FlyTunesSong flyTunesSong)
+    public Iterator<FlyTunesSong> getSongs()
+    public String toString()
+    private String title;
+    private String band;
+    private ArrayList<FlyTunesSong> flyTunesSongs = new ArrayList<FlyTunesSong>();
+}
+
+class FlyTunesStore {
+     private HashMap<String, FlyTunesAlbum> albums
+    private ArrayList<FlyTunesSong> flyTunesSongs
+    private int getSelection()
+    private void listSongs()
+    private void listAlbums()
+    private int findSong(String name, String band)
+    private FlyTunesSong addSong()
+    private void addAlbum()
+    private void listSongsOnAlbum()
+    private void updateSongPrice()
+
+}
+
+FlyTunesStore--FlyTuneSongs: < uses
+FlyTunesStore--FlyTunesAlbum: < uses
+
+@enduml
