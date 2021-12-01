@@ -27,7 +27,8 @@ public class RacingSquare extends GRect implements Runnable {
 
         // run the race
         for (int i = 0; i < 100; i++) {
-            pause(rgen.nextInt(50, 150));
+            //pause(rgen.nextInt(50, 150));
+            pause(40);
             move(STEP, 0);
         }
 

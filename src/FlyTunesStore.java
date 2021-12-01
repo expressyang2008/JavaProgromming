@@ -86,7 +86,6 @@ public class FlyTunesStore extends ConsoleProgram {
      * returns the index of the song in the store's song list
      * if it already exists and -1 otherwise.
      */
-
     private int findSong(String name, String band) {
         int index = -1;
         for (int i = 0; i < flyTunesSongs.size(); i++) {

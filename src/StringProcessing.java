@@ -15,5 +15,29 @@ public class StringProcessing extends ConsoleProgram {
                matrix[i][j]=1;
            }
        }
+       print(matrix[0][1]);
+    }
+
+    // Return ture if str is a palindrome,false otherwise
+    private boolean isPalindrome(String str) {
+        for (int i = 0; i < str.length() / 2; i++) {
+            if ((str.charAt(i) != str.charAt(str.length() - (i + 1)))) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    // Return ture if str is a palindrome,false otherwise
+    private boolean simplePalindrome(String str) {
+        return str.equals(reverseString(str));
+    }
+
+    private String reverseString(String str) {
+        String result = "";
+        for (int i = str.length() - 1; i >= 0; i--) {
+            result = result + str.charAt(i);
+        }
+        return result;
     }
 }

@@ -1,0 +1,20 @@
+@startuml
+'https://plantuml.com/component-diagram
+
+
+interface IIntelligence {
+void thinking();
+void reasoning();
+}
+
+class Dolphin implements IIntelligence {
+}
+
+class Human extends Primate implements IIntelligence  {
+
+}
+
+class Primate{
+}
+
+@enduml

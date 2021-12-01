@@ -1,5 +1,3 @@
-
-
 /**
  * @program: JavaProgromming
  * @description: This programs shows an example of threads to simulate running a race.
@@ -10,7 +8,6 @@
 
 import acm.graphics.GLine;
 import acm.program.GraphicsProgram;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 
@@ -19,10 +16,8 @@ public class ThreadsExample extends GraphicsProgram {
         racers = new RacingSquare[NUM_RACERS];
         finished = new boolean[NUM_RACERS];
         threads = new Thread[NUM_RACERS];
-
         //finish line
         add(new GLine(510, 0, 510, 400));
-
         add(new JButton("Start"), SOUTH);
         addActionListeners();
     }
@@ -35,10 +30,11 @@ public class ThreadsExample extends GraphicsProgram {
                 if (racers[i] != null) {
                     remove(racers[i]);
                 }
-
+                // create new racer
                 racers[i] = new RacingSquare(i, finished);
                 add(racers[i], 10, 10 + (40 * i));
-
+                // send the new racer along its way
+                // (on a separate thread)
                 threads[i] = new Thread(racers[i]);
                 threads[i].start();
             }

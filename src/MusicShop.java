@@ -75,8 +75,7 @@ public class MusicShop extends Program {
             canvas.displayInventory(inventory.get(albumName.getText()));
         }
     }
-
-
+    
     HashMap<String, Album> inventory = new HashMap<String, Album>();
     private JLabel label;
     private JTextField albumName;
